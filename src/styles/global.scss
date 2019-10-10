@@ -1,0 +1,327 @@
+@import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+
+body {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  letter-spacing: .05rem;
+  background-color: transparent;
+  color: $text;
+  height:100%;
+}
+#app, 
+.container-fluid,
+.row { 
+  height:100%; 
+}
+
+html {
+  height: 100%;
+}
+
+ul.bulleted {
+  list-style-type: disc;
+  margin-left: .5rem;
+}
+li.bullet-li {
+  list-style-type: disc;
+  display: list-item;
+  margin-bottom:.8rem;
+  line-height: 1.5rem;
+}
+
+#details-header {
+  ol.breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: " > ";
+  }
+
+  li {
+    margin:0;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+#details-main {
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+}
+
+.sr-only {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  height: 1px; 
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.pipe { 
+  color: $primary;
+  font-weight: bold;
+  margin: 0 .35rem;
+}
+
+img.bordered {
+  border: 1px solid #ccc;
+  box-shadow: #999 0 0 5px ;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+main {
+  margin: 2rem 0 5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.main-text {
+  line-height: 2rem;
+  
+  a {
+   font-weight: bold;
+   color: $primary;
+  } 
+
+}
+
+
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity .3s;
+}
+/* .fade-leave {
+ opacity: 1; (this is the default)
+}*/
+.fade-leave-active {
+   transition: opacity .3s;
+   opacity: 0;
+}
+
+
+#sidebar { 
+
+    color: #fff;
+    text-align: center;
+    height: 100%;
+    background: $primary url(assets/cactus_sidebar_g8.png) top left/cover no-repeat;
+
+    h1 {
+      font-size: 1.7rem;
+    }
+    
+    a {
+      color: #FFF;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #ccc;
+      text-decoration: underline;
+    }
+    li a i {
+      font-size: 1.5rem;
+      opacity: .5;
+    }
+    li a:hover i {
+      font-size: 1.5rem;
+      opacity: 1;
+    }
+
+}
+
+#home.home-main {
+    padding-top: 12rem;
+    
+
+    #home-icons {
+      max-width: 600px;
+
+      img {
+        max-height:50px;
+      }
+  }
+}
+
+
+#skills {
+
+
+  #jane img {
+    max-width: 175px;
+  }
+}
+
+
+#resume {
+  margin: 60px 0 30px;
+
+  p.desc {
+    line-height: 1.5rem;
+  }
+  a.getresume  {
+    color: $primary;
+    font-weight: bold;
+    font-size: .8rem;
+    opacity: 1;
+    cursor: pointer;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $primary;
+  }
+  a.getresume:hover {
+    opacity: .5;
+    text-decoration: none;
+  }
+  #siu img {
+    max-width: 100%;
+    width: 140px;
+  }
+  p.h5 {
+    font-weight:bold;
+    font-size: 1.15rem;
+
+    a {
+      color:$primary;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+  }
+
+}
+
+#web {
+  margin: 60px 0 30px;
+
+  .card-deck {
+    padding:0 15px;
+  }
+  .card a {
+    color: $primary;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 1em;
+  }
+  .btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .16rem;
+  }
+}
+
+#details-main {
+  .project-title {
+    font-weight: 600;
+    font-size: .75rem;
+    text-transform: uppercase;
+  }
+  a.view-live {
+     margin-left: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+     border-left: 1px solid #000;
+     text-decoration: underline;
+  }
+
+  i.fas {
+    color: $text;
+    font-size: 90%;
+    text-decoration: none;
+  }
+}
+
+img.modal-img {
+  -webkit-box-shadow: 0px 0px 9px 4px rgba(0,0,0,0.25); 
+  box-shadow: 0px 0px 9px 4px rgba(0,0,0,0.25);
+  max-width: 100%;
+}
+
+#nav li {
+  text-transform: uppercase;
+}
+
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991px)  {
+  #home.home-main {
+    padding-top: 50px;
+  }
+
+}
+
+/* Small devices (landscape phones) */
+  @media (min-width: 576px) and (max-width: 767px) {
+
+    #home.home-main {
+      padding-top: 50px;
+    }
+    #skills {
+      #jane img {
+        max-width: 105px;
+      }
+    }
+}
+
+/* Extra small devices (portrait phones)*/
+  @media (max-width: 575px) {
+    html {
+      background-image: none;
+    }
+
+    #home.home-main {
+      padding-top: 0px;
+
+      #home-icons img {
+        max-height:30px;
+      }
+    }
+    #skills {
+      #jane img {
+        max-width: 105px;
+      }
+    }
+
+}
